@@ -2,9 +2,28 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+## Reflection
+Components of proportional, differential, and integral controller explained
+* Proportional
+    * The Proportional part of the controller can be thought as looking at the present. 
+    It looks at the current error and applies a force proportional to that error 
+    in order to minimize it. This comes with the draw back that if the gain is too 
+    high it will overshoot and oscillate back and forth similar to a pendulum.
+* Integral
+    * The Integral part of the controller can be thought as looking at the past. It accrues 
+    the error to account for things such as biases, as the error accrues the force to correct that error 
+    increases eventually correcting it.
+* Derivative
+    * The Derivative part of the controller can be thought as looking at the future. It will 
+    look at the rate of change of the error ensuring that rather than overshooting the desired signal
+    it will push against too large of a force to slow down the proportional part of the controller resulting 
+    in a smoother curve as well as lowering overshoot.
+    
+The final parameters of the controller where chosen using manual tuning.
+
 
 ## Dependencies
-
+* make >= 4.1
 * cmake >= 3.5
  * All OSes: [click here for installation instructions](https://cmake.org/install/)
 * make >= 4.1
